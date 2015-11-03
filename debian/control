@@ -1,0 +1,22 @@
+Source: python-ua-parser
+Section: python
+Priority: extra
+Maintainer: Lindsey Simon (@elsigh)
+Build-Depends: debhelper (>= 7), python-all, python-setuptools (>= 0.6b3)
+Standards-Version: 3.9.5.0
+Homepage: https://pypi.python.org/pypi/ua-parser
+Vcs-Git: git://github.com/ua-parser/uap-python
+X-Python-Version: >= 2.6
+
+Package: python-ua-parser
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Recommends: python-yaml
+Description: A multi-language port of Browserscope's user agent parser
+ ua-parser is a multi-language port of BrowserScope's user agent string parser.
+ .
+ The crux of the original parser--the data collected by Steve Souders over the years--has
+ been extracted into a separate YAML file so as to be reusable as is by implementations
+ in other programming languages.
+ .
+ ua-parser is just a small wrapper around this data.
