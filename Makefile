@@ -1,11 +1,11 @@
 all: prep test
 
 prep:
-	#git submodule update --init
+	git submodule update --init
 	#sudo apt-get install python-yaml
 
 test:
-	@#test ! -d tmp && mkdir tmp
+	@test ! -d tmp && mkdir tmp
 	@export PYTHONPATH=tmp && python setup.py develop -d tmp
 	@# run all tests
 	@python ua_parser/user_agent_parser_test.py
