@@ -21,4 +21,7 @@ clean:
 	   dist\
 	   build
 
-.PHONY: all prep test clean
+install:
+	python setup.py install --root $(DESTDIR)
+
+.PHONY: all prep test clean install
