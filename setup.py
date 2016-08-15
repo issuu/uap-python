@@ -186,7 +186,7 @@ setup(
     include_package_data=True,
     setup_requires=['pyyaml'],
     install_requires=[],
-    ext_modules = cythonize("ua_parser/user_agent_parser.py"),
+    ext_modules = cythonize(["ua_parser/_regexes.py", "ua_parser/user_agent_parser.py"]),
     cmdclass=cmdclass,
     classifiers=[
         'Development Status :: 4 - Beta',
