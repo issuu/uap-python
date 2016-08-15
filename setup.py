@@ -7,6 +7,7 @@ from setuptools import setup
 from setuptools.command.develop import develop as _develop
 from setuptools.command.sdist import sdist as _sdist
 from setuptools.command.install import install as _install
+from Cython.Build import cythonize
 
 
 def check_output(*args, **kwargs):
@@ -185,6 +186,7 @@ setup(
     include_package_data=True,
     setup_requires=['pyyaml'],
     install_requires=[],
+    ext_modules = cythonize("ua_parser/user_agent_parser.py"),
     cmdclass=cmdclass,
     classifiers=[
         'Development Status :: 4 - Beta',
