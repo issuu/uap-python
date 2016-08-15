@@ -19,4 +19,8 @@ clean:
 install:
 	python setup.py install --root $(DESTDIR)
 
-.PHONY: all test clean install
+release: clean
+	python setup.py sdist bdist_wheel
+	twine upload -s dist/*
+
+.PHONY: all test clean install release

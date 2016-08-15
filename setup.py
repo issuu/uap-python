@@ -129,7 +129,6 @@ class build_regexes(Command):
                 fp.write(force_bytes('        %r,\n' % device_parser.get('os_v4_replacement')))
                 fp.write(b'    ),\n')
             fp.write(b']\n')
-            fp.write(b'\n')
 
         self.update_manifest()
 
@@ -174,7 +173,7 @@ cmdclass = {
 
 setup(
     name='ua-parser',
-    version='0.6.1',
+    version='0.7.1',
     description="Python port of Browserscope's user agent parser",
     author='PBS',
     author_email='no-reply@pbs.org',
